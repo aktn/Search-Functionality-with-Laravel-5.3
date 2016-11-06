@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+//Route for search function
+Route::get('/search',[
+	'as' => 'api.search',
+	'uses' => 'Api\SearchController@search'
+]);	
